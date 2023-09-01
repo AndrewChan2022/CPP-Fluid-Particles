@@ -1,6 +1,33 @@
+
+
+update cmake for vs 2022
+
+## windows build - 2023
+
+### prerequisite
+
+CUDA (7.5 or above)
+
+cuda-samples:
+
+    git clone https://github.com/NVIDIA/cuda-samples
+
+    copy cuda-samples to cuda root C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2
+
+    set env NVCUDASAMPLES_ROOT C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\cuda-samples
+
+
+### build
+
+    cmake -B build
+
+    cmake --build build --config Release
+
+
 # C++ Fluid Particles
 
 This repository contains my own implementation of several Smoothed Particle Hydrodynamics (SPH) related papers using C++ and CUDA, including the Weakly Compressible SPH [1], Position-Based Fluids [2], Divergence-Free SPH [3], etc. All credits should be given to the authors of the original papers. My own implementation is meant for study and research use only.
+
 
 ## Some Results (GIF)
 This example contains 20,736 particles and is timed on a Windows PC with i5-6500 CPU, GTX 1070 GPU and CUDA 8.0 installed.  
